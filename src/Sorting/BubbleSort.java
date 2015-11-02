@@ -12,6 +12,7 @@ public class BubbleSort {
 	public void bubbleSort(List<Integer> numbers) {
 
 		int size = numbers.size();
+		System.out.println("Size:=" + numbers.size());
 		for (int i = 0; i < size; i++) {
 			if (i == numbers.size() - 1) {
 				size = size - 1;
@@ -26,6 +27,7 @@ public class BubbleSort {
 				numbers.set(i + 1, swapSpace);
 
 			}
+			System.out.print("Loop:=" + i);
 			System.out.println(numbers);
 		}
 	}
