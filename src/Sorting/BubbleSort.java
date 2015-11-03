@@ -11,7 +11,9 @@ public class BubbleSort {
 
 	public void bubbleSort(List<Integer> numbers) {
 
-		for (int b = 0; b < numbers.size(); b++) {
+		boolean isSwapped = true;
+		while (isSwapped) {
+			isSwapped = false;
 			for (int i = 0; i < numbers.size(); i++) {
 				if (i == numbers.size() - 1) {
 					break;
@@ -20,12 +22,13 @@ public class BubbleSort {
 					int swapSpace = numbers.get(i);
 					numbers.set(i, numbers.get(i + 1));
 					numbers.set(i + 1, swapSpace);
-
+					isSwapped = true;
 				}
-				System.out.print("Loop:=" + i);
+				System.out.print("i Loop:=" + i);
 				System.out.println(numbers);
 			}
 		}
+		System.out.println(" ");
 	}
 
 	@Test
@@ -38,15 +41,5 @@ public class BubbleSort {
 		assertEquals(expected, numbers);
 
 	}
-
-	// @Test
-	// public void testInsertSort(){
-	// final List<Integer> numbers = Arrays.asList(4,2,1,6,3,5,4);
-	// final List<Integer> expected = Arrays.asList(1,2,3,4,4,5,6);
-	//
-	// ArrayList<Integer> newArrayList = insertSort(numbers);
-	//
-	// assertEquals(expected,newArrayList);
-	// }
 
 }
