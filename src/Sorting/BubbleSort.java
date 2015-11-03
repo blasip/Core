@@ -11,24 +11,20 @@ public class BubbleSort {
 
 	public void bubbleSort(List<Integer> numbers) {
 
-		int size = numbers.size();
-		System.out.println("Size:=" + numbers.size());
-		for (int i = 0; i < size; i++) {
-			if (i == numbers.size() - 1) {
-				size = size - 1;
-				i = 0;
-				if (size == 0) {
+		for (int b = 0; b < numbers.size(); b++) {
+			for (int i = 0; i < numbers.size(); i++) {
+				if (i == numbers.size() - 1) {
 					break;
 				}
-			}
-			if (numbers.get(i) > numbers.get(i + 1)) {
-				int swapSpace = numbers.get(i);
-				numbers.set(i, numbers.get(i + 1));
-				numbers.set(i + 1, swapSpace);
+				if (numbers.get(i) > numbers.get(i + 1)) {
+					int swapSpace = numbers.get(i);
+					numbers.set(i, numbers.get(i + 1));
+					numbers.set(i + 1, swapSpace);
 
+				}
+				System.out.print("Loop:=" + i);
+				System.out.println(numbers);
 			}
-			System.out.print("Loop:=" + i);
-			System.out.println(numbers);
 		}
 	}
 
