@@ -3,14 +3,12 @@ package PaymentApplication;
 public class Commissioned implements Payee {
 
 	String name;
-	Double commissionRate;
-	Double totalCommissionSales;
+	Double commAmount;
 	Integer bankAccount; 
 	
-	Commissioned (String name, Double commissionRate, Double totalCommissionSales, Integer bankAccount) {
+	Commissioned (String name, Double commAmount, Integer bankAccount) {
 		this.name = name;
-		this.commissionRate = commissionRate;
-		this.totalCommissionSales = totalCommissionSales;
+		this.commAmount = commAmount;
 		this.bankAccount = bankAccount;
 	}
 	
@@ -21,7 +19,7 @@ public class Commissioned implements Payee {
 
 	@Override
 	public Double getGrossPayment() {
-		return totalCommissionSales * commissionRate ;
+		return commAmount;
 	}
 
 	@Override
