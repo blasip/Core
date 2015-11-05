@@ -2,11 +2,11 @@ package PaymentApplication;
 
 public class Commissioned implements Payee {
 
-	String name;
-	Double commAmount;
-	Integer bankAccount; 
+	private String name;
+	private Double commAmount;
+	private Integer bankAccount; 
 	
-	Commissioned (String name, Double commAmount, Integer bankAccount) {
+	public Commissioned (String name, Double commAmount, Integer bankAccount) {
 		this.name = name;
 		this.commAmount = commAmount;
 		this.bankAccount = bankAccount;

@@ -11,8 +11,8 @@ public class SalariedTest {
 
 	@Before
 	public void setUp() {
-		salariedTest = new Salaried("Mr. Paul", 27777.78, 12349876);
-
+		//salariedTest = new Salaried("Mr. Paul", 27777.78, 12349876);
+		//salariedTest = new Salaried();
 	}
 
 	@Test

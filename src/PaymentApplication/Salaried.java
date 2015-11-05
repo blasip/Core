@@ -2,11 +2,11 @@ package PaymentApplication;
 
 public class Salaried implements Payee {
 	
-	String name;
-	Double grossPay;
-	Integer bankAccount;
+	private String name;
+	private Double grossPay;
+	private Integer bankAccount;
 	
-	Salaried (String name, Double grossPay, Integer bankAccount) {
+	public Salaried (String name, Double grossPay, Integer bankAccount) {
 		this.name = name;
 		this.grossPay = grossPay;
 		this.bankAccount = bankAccount;
