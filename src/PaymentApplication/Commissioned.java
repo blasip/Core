@@ -11,12 +11,19 @@ public class Commissioned extends Employee {
 
 	public void addCommission(Double amount) {
 		commissionedAmount = commissionedAmount + amount;
-		
+
 	}
-	
+
 	@Override
 	public Double getGrossPayment() {
-		return grossPay + commissionedAmount;
+		return grossPay + commissionedAmount + bonus;
 	}
-	
+
+	@Override
+	public void giveBonus(Double percentage) {
+		Double multiplier = percentage / 100;
+		bonus = (grossPay * multiplier) * 1.5;
+
+	}
+
 }
