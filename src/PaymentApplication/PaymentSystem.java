@@ -20,7 +20,7 @@ public class PaymentSystem {
 		for (Payee payee : payees) {
 			Double grossPayment = payee.getGrossPayment();
 			System.out.println("Paying to " + payee.getName());
-			System.out.println("Gross" + grossPayment);
+			System.out.println("Gross " + grossPayment);
 			System.out.println("Transferred to Account: "
 					+ payee.getBankAccount());
 		}
