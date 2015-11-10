@@ -9,8 +9,14 @@ public class Commissioned extends Employee {
 		commissionedAmount = 0.00;
 	}
 
-	public Double addCommission(Double amount) {
+	public void addCommission(Double amount) {
 		commissionedAmount = commissionedAmount + amount;
+		
+	}
+	
+	@Override
+	public Double getGrossPayment() {
 		return grossPay + commissionedAmount;
 	}
+	
 }

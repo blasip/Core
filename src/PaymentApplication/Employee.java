@@ -12,17 +12,17 @@ abstract class Employee implements Payee {
 		this.bankAccount = bankAccount;
 	}
 	
-	@Override
+
 	public String getName() {
 		return name;
 	}
 
-	@Override
+
 	public Double getGrossPayment() {
 		return grossPay;
 	}
 
-	@Override
+
 	public Integer getBankAccount() {
 		return bankAccount;
 	}
