@@ -5,17 +5,17 @@ public class ContractingCompany implements Payee {
 	public String name;
 	public Double grossPay;
 	public Integer bankAccount;
-	public Double totalPay;
+	public Double additionalPay;
 
 	ContractingCompany(String name, Double grossPay, Integer bankAccount) {
 		this.name = name;
 		this.grossPay = grossPay;
 		this.bankAccount = bankAccount;
-		this.totalPay = 0.00;
+		this.additionalPay = 0.00;
 	}
 	public void payForServices(Double amount) {
 				
-		totalPay += amount;
+		additionalPay += amount;
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class ContractingCompany implements Payee {
 
 	@Override
 	public Double getGrossPayment() {
-		return grossPay + totalPay;
+		return grossPay + additionalPay;
 	}
 
 	@Override
