@@ -15,6 +15,14 @@ public class PaymentApplication {
 		carlaT.giveBonus(20.00);
 		paymentSystem.addPayee(carlaT);
 		
+		ContractingCompany company = new ContractingCompany("Wes University", 4000.00, 9956);
+		company.payForServices(1000.00);
+		company.payForServices(999.99);
+		paymentSystem.addPayee(company);
+		
+		
+		
+		
 		
 		paymentSystem.processPayments();
 		
